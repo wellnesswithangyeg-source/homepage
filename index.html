@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wellness with Angy — Cairo</title>
+<meta name="description" content="Angy — certified nutrition coach and yoga teacher in Cairo. Responsible, sourced wellness for real, busy lives.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF6EF;
+    --paper:#F6EDE4;
+    --blush:#EFD9D2;
+    --rosewood:#8C4A47;
+    --rosewood-deep:#6E3936;
+    --sage:#7C8A66;
+    --sage-deep:#5F6C4C;
+    --gold:#C6A05F;
+    --ink:#3A2E28;
+    --ink-soft:#6B5C52;
+    --line: rgba(140,74,71,0.22);
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--cream);
+    background-image:
+      radial-gradient(ellipse at 12% 0%, rgba(124,138,102,0.08), transparent 45%),
+      radial-gradient(ellipse at 90% 8%, rgba(140,74,71,0.07), transparent 40%);
+    color:var(--ink);
+    font-family:'Quicksand', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{ animation: rise 0.9s ease both; }
+  }
+  @keyframes rise{ from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:translateY(0);} }
+
+  a{ color:inherit; }
+  h1,h2,h3{ font-family:'Cormorant Garamond', serif; font-weight:500; margin:0; }
+  .eyebrow{
+    font-family:'Quicksand', sans-serif;
+    font-size:0.72rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--rosewood);
+    font-weight:600;
+  }
+
+  .wrap{ max-width:1080px; margin:0 auto; padding:0 28px; }
+
+  /* ---------- nav ---------- */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(251,246,239,0.86);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{ display:flex; align-items:center; justify-content:space-between; padding-top:16px; padding-bottom:16px; }
+  .wordmark{ font-family:'Cormorant Garamond', serif; font-style:italic; font-size:1.25rem; color:var(--rosewood-deep); letter-spacing:0.01em; }
+  .navlink{
+    font-size:0.78rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:600;
+    color:var(--ink); text-decoration:none; border-bottom:1px solid transparent; padding-bottom:2px;
+    transition:border-color .2s ease, color .2s ease;
+  }
+  .navlink:hover{ border-color:var(--gold); color:var(--rosewood); }
+  .navlink:focus-visible{ outline:2px solid var(--rosewood); outline-offset:3px; }
+
+  /* ---------- sprig divider ---------- */
+  .sprig{ display:flex; justify-content:center; margin:0 auto; opacity:0.75; }
+  .sprig svg{ width:120px; height:auto; }
+
+  /* ---------- hero ---------- */
+  .hero{ padding:76px 0 40px; text-align:center; }
+  .hero .eyebrow{ display:block; margin-bottom:18px; }
+  .hero h1{
+    font-size:clamp(3rem, 9vw, 5.6rem);
+    color:var(--rosewood-deep);
+    line-height:0.98;
+  }
+  .hero h1 em{ font-style:italic; color:var(--sage-deep); }
+  .role-line{
+    margin-top:18px;
+    font-size:1rem;
+    letter-spacing:0.05em;
+    color:var(--ink-soft);
+    font-weight:600;
+  }
+  .role-line .dot{ color:var(--gold); margin:0 10px; }
+  .hero p.lede{
+    max-width:560px; margin:26px auto 0; font-size:1.08rem; line-height:1.75; color:var(--ink-soft);
+  }
+  .hero-cta{ margin-top:34px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+  .btn{
+    display:inline-block; padding:13px 26px; font-family:'Quicksand', sans-serif;
+    font-size:0.82rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:700;
+    text-decoration:none; border-radius:999px; transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .btn:focus-visible{ outline:2px solid var(--rosewood); outline-offset:3px; }
+  .btn-solid{ background:var(--rosewood); color:var(--cream); box-shadow:0 6px 18px rgba(140,74,71,0.28); }
+  .btn-solid:hover{ transform:translateY(-2px); box-shadow:0 10px 22px rgba(140,74,71,0.34); }
+  .btn-outline{ border:1.5px solid var(--rosewood); color:var(--rosewood-deep); background:transparent; }
+  .btn-outline:hover{ transform:translateY(-2px); background:rgba(140,74,71,0.06); }
+
+  /* ---------- about ---------- */
+  .about{ padding:64px 0 20px; }
+  .about-grid{
+    display:grid; grid-template-columns: 0.85fr 1.15fr; gap:56px; align-items:center;
+  }
+  @media (max-width:760px){ .about-grid{ grid-template-columns:1fr; gap:34px; } }
+
+  .frame{
+    position:relative; aspect-ratio:4/5; border-radius:6px;
+    background: linear-gradient(160deg, var(--blush), var(--paper));
+    border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+  }
+  .frame::before{
+    content:""; position:absolute; inset:14px; border:1px solid rgba(140,74,71,0.35); border-radius:2px; z-index:2; pointer-events:none;
+  }
+  .frame img{
+    width:100%; height:100%; object-fit:cover; object-position:50% 30%;
+    filter:saturate(1.02) contrast(1.02);
+  }
+  .frame .tag{
+    position:absolute; bottom:26px; left:50%; transform:translateX(-50%); z-index:2;
+    font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--cream); font-weight:700;
+    white-space:nowrap; background:rgba(58,46,40,0.55); padding:6px 14px; border-radius:999px; backdrop-filter:blur(3px);
+  }
+
+  .about h2{ font-size:2.1rem; color:var(--rosewood-deep); margin-bottom:18px; }
+  .about p{ font-size:1rem; line-height:1.85; color:var(--ink-soft); margin:0 0 16px; }
+  .credentials{ list-style:none; padding:0; margin:22px 0 0; display:flex; flex-direction:column; gap:10px; }
+  .credentials li{
+    font-size:0.85rem; letter-spacing:0.03em; color:var(--ink);
+    padding-left:20px; position:relative;
+  }
+  .credentials li::before{
+    content:"✦"; position:absolute; left:0; top:1px; color:var(--gold); font-size:0.75rem;
+  }
+
+  /* ---------- philosophy ---------- */
+  .philosophy{ padding:70px 0; text-align:center; }
+  .philosophy blockquote{
+    margin:0 auto; max-width:640px;
+    font-family:'Cormorant Garamond', serif; font-style:italic;
+    font-size:clamp(1.5rem, 3.4vw, 2.1rem); line-height:1.5; color:var(--rosewood-deep);
+  }
+  .philosophy cite{ display:block; margin-top:18px; font-style:normal; font-size:0.78rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--sage-deep); font-weight:700; }
+
+  /* ---------- archive ---------- */
+  .archive{ padding:30px 0 80px; }
+  .archive-head{ text-align:center; margin-bottom:48px; }
+  .archive-head h2{ font-size:2.4rem; color:var(--rosewood-deep); margin-top:10px; }
+  .archive-head p{ color:var(--ink-soft); max-width:520px; margin:14px auto 0; line-height:1.7; }
+
+  .cards{ display:grid; grid-template-columns:repeat(2, 1fr); gap:24px; }
+  @media (max-width:700px){ .cards{ grid-template-columns:1fr; } }
+
+  .card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:30px 28px 26px;
+    position:relative;
+    text-decoration:none;
+    display:block;
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .card:hover{ transform:translateY(-4px); box-shadow:0 16px 30px rgba(58,46,40,0.10); border-color:var(--rosewood); }
+  .card:focus-visible{ outline:2px solid var(--rosewood); outline-offset:4px; }
+  .card-top{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; }
+  .specimen-no{
+    font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--sage-deep); font-weight:700;
+  }
+  .card-kind{
+    font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-soft); font-weight:600;
+    border:1px solid var(--line); padding:3px 9px; border-radius:999px; white-space:nowrap;
+  }
+  .card h3{ font-size:1.55rem; color:var(--rosewood-deep); line-height:1.15; margin-bottom:10px; }
+  .card p{ font-size:0.92rem; color:var(--ink-soft); line-height:1.65; margin:0 0 18px; }
+  .card-go{
+    font-size:0.76rem; letter-spacing:0.12em; text-transform:uppercase; font-weight:700; color:var(--rosewood);
+    display:inline-flex; align-items:center; gap:8px;
+  }
+  .card-go .arrow{ transition:transform .2s ease; }
+  .card:hover .card-go .arrow{ transform:translateX(4px); }
+
+  /* ---------- connect ---------- */
+  .connect{
+    padding:66px 0 90px; text-align:center;
+    background:linear-gradient(180deg, transparent, rgba(124,138,102,0.08));
+  }
+  .connect h2{ font-size:2rem; color:var(--rosewood-deep); }
+  .connect p{ color:var(--ink-soft); max-width:520px; margin:16px auto 30px; line-height:1.75; }
+  .keywords{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:34px; }
+  .kw{
+    font-family:'Quicksand', sans-serif; font-size:0.78rem; letter-spacing:0.08em; font-weight:700;
+    color:var(--rosewood-deep); background:var(--blush); border:1px solid var(--line);
+    padding:9px 16px; border-radius:999px;
+  }
+  .kw span{ opacity:0.6; font-weight:500; text-transform:none; letter-spacing:0; }
+
+  footer{
+    padding:34px 0 46px; text-align:center; border-top:1px solid var(--line);
+  }
+  footer p{ font-size:0.78rem; color:var(--ink-soft); margin:0; letter-spacing:0.03em; }
+  footer a{ text-decoration:none; color:var(--rosewood); font-weight:600; }
+  footer a:hover{ text-decoration:underline; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="wordmark">Wellness with Angy</span>
+    <a class="navlink" href="https://www.instagram.com/wellnesswithangy" target="_blank" rel="noopener">Instagram ↗</a>
+  </div>
+</nav>
+
+<header class="hero reveal">
+  <div class="wrap">
+    <span class="eyebrow">Cairo, Egypt</span>
+    <h1>Hello, I'm <em>Angy</em></h1>
+    <p class="role-line">Certified Nutrition Coach <span class="dot">·</span> Yoga Teacher <span class="dot">·</span> Wellness Editor</p>
+    <p class="lede">I write about food, cooking, and cooling down in Cairo's heat — grounded in what's actually in season here, and honest about what the evidence does and doesn't say. No generic claims, just sourcing notes and a few things worth knowing before you try something new.</p>
+    <div class="hero-cta">
+      <a class="btn btn-solid" href="#archive">Browse the archive</a>
+      <a class="btn btn-outline" href="https://www.instagram.com/wellnesswithangy" target="_blank" rel="noopener">Follow along</a>
+    </div>
+  </div>
+</header>
+
+<div class="sprig" aria-hidden="true">
+  <svg viewBox="0 0 140 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 12 H138" stroke="#C6A05F" stroke-width="1"/>
+    <path d="M70 12 C63 4, 55 4, 50 12 C55 4, 63 4, 70 12 C77 4, 85 4, 90 12 C85 4, 77 4, 70 12 Z" fill="#7C8A66" opacity="0.55"/>
+    <circle cx="70" cy="12" r="2.4" fill="#8C4A47"/>
+  </svg>
+</div>
+
+<section class="about">
+  <div class="wrap about-grid">
+    <div class="frame reveal">
+      <img src="angy-portrait.jpeg" alt="Angy in a yoga pose on the beach at sunrise, Ras Sidr">
+      <span class="tag">Ras Sidr, Egypt</span>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">A little about me</span>
+      <h2 style="margin-top:10px;">Wellness that fits a real, full life</h2>
+      <p>I split my days between two worlds that turn out to have more in common than you'd think: leading commercial strategy for a facility management company, and coaching people through the much slower, quieter work of eating well and moving with intention.</p>
+      <p>Both come down to the same thing — paying close attention, cutting the noise, and being honest about what actually works. On this side of my life, that means recipes built around what's genuinely in a Cairo kitchen, and guidance that always tells you the one thing to watch, not just the upside.</p>
+      <ul class="credentials">
+        <li>Certified Nutrition Coach</li>
+        <li>Certified Yoga Teacher</li>
+        <li>Wellness retreat host, most recently in Ras Sidr</li>
+        <li>Writing for a Middle Eastern women's audience, in season, in Cairo</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="philosophy">
+  <div class="wrap">
+    <blockquote>
+      "Real food, real guidance — the way I like to do wellness."
+      <cite>Angy</cite>
+    </blockquote>
+  </div>
+</section>
+
+<div class="sprig" aria-hidden="true">
+  <svg viewBox="0 0 140 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 12 H138" stroke="#C6A05F" stroke-width="1"/>
+    <path d="M70 12 C63 4, 55 4, 50 12 C55 4, 63 4, 70 12 C77 4, 85 4, 90 12 C85 4, 77 4, 70 12 Z" fill="#7C8A66" opacity="0.55"/>
+    <circle cx="70" cy="12" r="2.4" fill="#8C4A47"/>
+  </svg>
+</div>
+
+<section class="archive" id="archive">
+  <div class="wrap">
+    <div class="archive-head reveal">
+      <span class="eyebrow">The Collection</span>
+      <h2>From the Kitchen Archive</h2>
+      <p>A running record of what I'm cooking, coaching, and thinking about — each one pressed and kept for whenever you need it.</p>
+    </div>
+
+    <div class="cards">
+      <a class="card" href="https://wellnesswithangyeg-source.github.io/cairo-beauty-foods/" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="specimen-no">Specimen No. 04</span>
+          <span class="card-kind">Guide</span>
+        </div>
+        <h3>The Cairo Beauty Kitchen</h3>
+        <p>Thirteen beauty foods the world talks about, sitting quietly in your Cairo kitchen — where to find each one well, and the one thing to watch.</p>
+        <span class="card-go">Read the guide <span class="arrow">→</span></span>
+      </a>
+
+      <a class="card" href="https://wellnesswithangyeg-source.github.io/sardines-recipe/" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="specimen-no">Specimen No. 05</span>
+          <span class="card-kind">Recipe</span>
+        </div>
+        <h3>Baked Sardines, Mediterranean Style</h3>
+        <p>A light, golden little ritual — olive oil, lemon, and garlic, on the table in under 15 minutes.</p>
+        <span class="card-go">Get the recipe <span class="arrow">→</span></span>
+      </a>
+
+      <a class="card" href="https://wellnesswithangyeg-source.github.io/cool/" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="specimen-no">Specimen No. 06</span>
+          <span class="card-kind">Guide</span>
+        </div>
+        <h3>Eating Through the Heat Wave</h3>
+        <p>What actually helps your body cope when Cairo hits 40°C+, and what quietly makes it worse — built around what's in season right now.</p>
+        <span class="card-go">Read the guide <span class="arrow">→</span></span>
+      </a>
+
+      <a class="card" href="https://wellnesswithangyeg-source.github.io/protein-cookie/" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="specimen-no">Specimen No. 07</span>
+          <span class="card-kind">Recipe</span>
+        </div>
+        <h3>Chocolate Chip Chickpea Cookies</h3>
+        <p>Soft, fudgy, and quietly high-protein — you'd never guess what's hiding in the batter. No refined sugar, just maple.</p>
+        <span class="card-go">Get the recipe <span class="arrow">→</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="connect">
+  <div class="wrap">
+    <span class="eyebrow">Say hello</span>
+    <h2 style="margin-top:10px;">Let's stay in touch</h2>
+    <p>I'd love to hear from you — come say hello on Instagram.</p>
+    <div class="hero-cta" style="margin-top:0;">
+      <a class="btn btn-solid" href="https://www.instagram.com/wellnesswithangy" target="_blank" rel="noopener">@wellnesswithangy</a>
+      <a class="btn btn-outline" href="https://www.instagram.com/cocozen.shop/" target="_blank" rel="noopener">@cocozen.shop</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Wellness with Angy · Cairo, Egypt · General wellness information, not a substitute for medical advice.</p>
+</footer>
+
+</body>
+</html>
