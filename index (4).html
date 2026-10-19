@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angy | Yoga Teacher and Certified Nutritionist in Cairo</title>
+<meta name="description" content="Simple wellness tips, guides and recipes from Angy, yoga teacher and certified nutritionist. Join my next retreat in Matarma, Ras Sidr.">
+<meta property="og:title" content="Angy | Yoga Teacher and Certified Nutritionist">
+<meta property="og:description" content="Simple wellness tips, guides and recipes. Join my next retreat in Matarma, Ras Sidr.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FBF6EF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23B5583A'/%3E%3Ctext x='32' y='43' font-size='34' text-anchor='middle' fill='%23FBF6EF' font-family='Georgia,serif' font-style='italic'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF6EF;
+    --ink:#241E19;
+    --ink-soft:#6E655C;
+    --line:#E8DFD2;
+    --accent:#B5583A;
+    --accent-deep:#97442B;
+    --blush:#F4DED4;
+    --sage:#DDE3D0;
+    --sand:#F0E4D1;
+    --clay:#EBD3C4;
+    --night:#2A231E;
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Inter', sans-serif; -webkit-font-smoothing:antialiased; line-height:1.6;
+  }
+  a{ color:inherit; }
+  h1,h2,h3{ font-family:'Cormorant Garamond', serif; font-weight:500; margin:0; line-height:1.08; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:0 28px; }
+  :focus-visible{ outline:3px solid var(--accent); outline-offset:3px; border-radius:6px; }
+
+  @media (prefers-reduced-motion: no-preference){
+    .rise{ animation: rise .9s ease both; }
+    .rise.d1{ animation-delay:.12s; } .rise.d2{ animation-delay:.24s; }
+  }
+  @keyframes rise{ from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:translateY(0);} }
+
+  /* buttons */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    min-height:52px; padding:0 30px; border-radius:999px; text-decoration:none;
+    font-size:.95rem; font-weight:600; letter-spacing:.01em; border:1.5px solid transparent;
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+  }
+  .btn .arrow{ transition:transform .2s ease; }
+  .btn:hover .arrow{ transform:translateX(4px); }
+  .btn-primary{ background:var(--accent); color:#fff; box-shadow:0 10px 24px rgba(181,88,58,.30); }
+  .btn-primary:hover{ background:var(--accent-deep); transform:translateY(-2px); box-shadow:0 14px 28px rgba(181,88,58,.38); }
+  .btn-ghost{ border-color:var(--ink); color:var(--ink); background:transparent; }
+  .btn-ghost:hover{ background:var(--ink); color:var(--bg); transform:translateY(-2px); }
+  .btn-light{ background:var(--bg); color:var(--ink); }
+  .btn-light:hover{ transform:translateY(-2px); box-shadow:0 14px 28px rgba(0,0,0,.28); }
+
+  /* nav */
+  nav{ padding:22px 0; }
+  nav .wrap{ display:flex; align-items:center; justify-content:space-between; gap:16px; }
+  .wordmark{ font-family:'Cormorant Garamond', serif; font-size:1.55rem; font-style:italic; text-decoration:none; }
+  .nav-cta{ min-height:44px; padding:0 22px; font-size:.86rem; }
+
+  /* hero */
+  .hero{ padding:34px 0 90px; }
+  .hero-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:72px; align-items:center; }
+  .eyebrow{ font-size:.76rem; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); font-weight:600; }
+  .hero h1{ font-size:clamp(3.2rem, 7.4vw, 5.6rem); margin-top:18px; letter-spacing:-.01em; }
+  .hero h1 em{ color:var(--accent); font-weight:500; }
+  .sub{ margin:26px 0 0; font-size:1.14rem; color:var(--ink-soft); max-width:30em; line-height:1.7; }
+  .hero-btns{ display:flex; gap:14px; flex-wrap:wrap; margin-top:36px; }
+  .proof{ display:flex; flex-wrap:wrap; gap:10px; margin-top:34px; }
+  .chip{
+    font-size:.78rem; font-weight:600; letter-spacing:.02em; padding:9px 16px; border-radius:999px;
+    background:#fff; border:1px solid var(--line); color:var(--ink);
+  }
+
+  .photo-wrap{ position:relative; justify-self:center; width:100%; max-width:400px; }
+  .photo-wrap::before{
+    content:""; position:absolute; inset:-22px -22px auto auto; width:78%; aspect-ratio:1; border-radius:50%;
+    background:var(--blush); z-index:0;
+  }
+  .photo-wrap::after{
+    content:""; position:absolute; inset:auto auto -18px -18px; width:46%; aspect-ratio:1; border-radius:50%;
+    background:var(--sage); z-index:0;
+  }
+  .photo{
+    position:relative; z-index:1; width:100%; aspect-ratio:820 / 1456; overflow:hidden;
+    border-radius:999px 999px 24px 24px; background:var(--line);
+    box-shadow:0 30px 60px rgba(36,30,25,.18);
+  }
+  .photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .badge{
+    position:absolute; z-index:2; left:-20px; bottom:46px;
+    display:flex; align-items:center; gap:14px; background:#fff; border-radius:18px;
+    padding:14px 20px 14px 18px; text-decoration:none; box-shadow:0 16px 36px rgba(36,30,25,.18);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .badge:hover{ transform:translateY(-3px); box-shadow:0 20px 40px rgba(36,30,25,.24); }
+  .badge small{ display:block; font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); font-weight:700; }
+  .badge strong{ display:block; font-size:1rem; font-weight:700; }
+  .badge .go{ width:34px; height:34px; border-radius:50%; background:var(--accent); color:#fff; display:grid; place-items:center; font-weight:700; flex-shrink:0; }
+
+  /* section head */
+  .section{ padding:84px 0; }
+  .section-head{ max-width:640px; margin-bottom:46px; }
+  .section-head h2{ font-size:clamp(2.3rem, 5vw, 3.4rem); margin-top:14px; }
+  .section-head p{ margin:16px 0 0; color:var(--ink-soft); font-size:1.05rem; }
+
+  /* cards */
+  .cards{ display:grid; grid-template-columns:repeat(2, 1fr); gap:22px; }
+  .card{
+    position:relative; display:flex; flex-direction:column; justify-content:space-between; gap:36px;
+    padding:34px 32px 30px; border-radius:26px; text-decoration:none; min-height:290px; overflow:hidden;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .card:hover{ transform:translateY(-6px); box-shadow:0 24px 44px rgba(36,30,25,.14); }
+  .card.feature{ grid-column:1 / -1; min-height:300px; }
+  .c1{ background:var(--clay); } .c2{ background:var(--sage); } .c3{ background:var(--sand); } .c4{ background:var(--blush); }
+  .card-num{
+    position:absolute; right:26px; top:6px; font-family:'Cormorant Garamond', serif; font-style:italic;
+    font-size:7.5rem; line-height:1; color:rgba(36,30,25,.07); pointer-events:none;
+  }
+  .tag{
+    align-self:flex-start; font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:700;
+    padding:7px 14px; border-radius:999px; background:rgba(255,255,255,.72); color:var(--ink);
+  }
+  .card h3{ font-size:clamp(1.9rem, 3.2vw, 2.5rem); margin-top:20px; max-width:14em; }
+  .card.feature h3{ font-size:clamp(2.2rem, 4vw, 3.2rem); }
+  .card p{ margin:12px 0 0; color:#4B4239; max-width:30em; font-size:1rem; }
+  .card-cta{
+    display:inline-flex; align-items:center; gap:10px; font-weight:700; font-size:.92rem;
+    border-bottom:2px solid var(--ink); padding-bottom:3px; align-self:flex-start;
+  }
+  .card-cta .arrow{ transition:transform .2s ease; }
+  .card:hover .card-cta .arrow{ transform:translateX(5px); }
+
+  /* about */
+  .about{ background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .about-grid{ display:grid; grid-template-columns:.8fr 1.2fr; gap:70px; align-items:start; }
+  .about h2{ font-size:clamp(2.3rem, 5vw, 3.4rem); margin-top:14px; }
+  .about p{ margin:0 0 18px; font-size:1.06rem; color:var(--ink-soft); line-height:1.85; }
+  .about .proof{ margin-top:26px; }
+
+  /* retreat */
+  .retreat{ background:var(--night); color:var(--bg); border-radius:34px; padding:70px 48px; text-align:center; position:relative; overflow:hidden; }
+  .retreat::before{
+    content:""; position:absolute; width:420px; height:420px; border-radius:50%; background:rgba(181,88,58,.28);
+    right:-120px; top:-160px;
+  }
+  .retreat::after{
+    content:""; position:absolute; width:300px; height:300px; border-radius:50%; background:rgba(221,227,208,.10);
+    left:-90px; bottom:-120px;
+  }
+  .retreat > *{ position:relative; z-index:1; }
+  .retreat .eyebrow{ color:#E9A58C; }
+  .retreat h2{ font-size:clamp(2.6rem, 6vw, 4.4rem); margin-top:16px; }
+  .retreat h2 em{ color:#E9A58C; }
+  .retreat p{ max-width:34em; margin:20px auto 0; color:#D9CFC3; font-size:1.1rem; }
+  .retreat .btn{ margin-top:34px; min-height:58px; padding:0 38px; font-size:1rem; }
+
+  /* follow */
+  .follow{ text-align:center; padding:84px 0 70px; }
+  .follow h2{ font-size:clamp(2.2rem, 5vw, 3.2rem); }
+  .follow p{ color:var(--ink-soft); margin:14px auto 30px; max-width:30em; }
+  .follow .hero-btns{ justify-content:center; margin-top:0; }
+
+  footer{ border-top:1px solid var(--line); padding:28px 0 40px; text-align:center; }
+  footer p{ margin:0; font-size:.78rem; color:var(--ink-soft); }
+
+  /* mobile sticky bar */
+  .sticky{
+    display:none; position:fixed; left:14px; right:14px; bottom:14px; z-index:50;
+    transform:translateY(140%); transition:transform .35s ease;
+  }
+  .sticky.show{ transform:translateY(0); }
+  .sticky .btn{ width:100%; min-height:56px; box-shadow:0 14px 30px rgba(36,30,25,.32); }
+
+  @media (max-width:860px){
+    .hero{ padding:14px 0 64px; }
+    .hero-grid{ grid-template-columns:1fr; gap:56px; }
+    .photo-wrap{ max-width:340px; }
+    .about-grid{ grid-template-columns:1fr; gap:10px; }
+    .section{ padding:64px 0; }
+    .retreat{ padding:54px 24px; border-radius:26px; }
+    .sticky{ display:block; }
+    footer{ padding-bottom:96px; }
+  }
+  @media (max-width:640px){
+    .wrap{ padding:0 20px; }
+    .cards{ grid-template-columns:1fr; }
+    .card{ min-height:260px; padding:30px 26px 26px; }
+    .hero-btns .btn{ width:100%; }
+    .badge{ left:-6px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="wordmark" href="#top">Angy</a>
+    <a class="btn btn-primary nav-cta" href="#retreat">Join the retreat</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow rise">Yoga teacher · Certified nutritionist · Cairo</span>
+      <h1 class="rise d1">Hello, I'm <em>Angy.</em></h1>
+      <p class="sub rise d1">I share simple wellness tips, hacks and ideas with my community online, and in person through my retreats.</p>
+      <div class="hero-btns rise d2" id="heroBtns">
+        <a class="btn btn-primary" href="#retreat">Join my next retreat <span class="arrow">→</span></a>
+        <a class="btn btn-ghost" href="#start">Explore guides and recipes</a>
+      </div>
+      <div class="proof rise d2">
+        <span class="chip">Certified Yoga Teacher</span>
+        <span class="chip">Certified Nutritionist</span>
+        <span class="chip">Retreat Host</span>
+      </div>
+    </div>
+
+    <div class="photo-wrap rise d1">
+      <div class="photo">
+        <img src="angy-portrait.jpeg" alt="Angy in a seated yoga backbend on the beach at sunset">
+      </div>
+      <a class="badge" href="https://docs.google.com/forms/d/e/1FAIpQLSd8C0yPoa1EOfXN9Vu3q37bhlfh3h3IcuGzlzDS74Qqlh_pQw/viewform?usp=preview" target="_blank" rel="noopener">
+        <span>
+          <small>Next retreat</small>
+          <strong>Matarma, Ras Sidr</strong>
+        </span>
+        <span class="go">→</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="start" style="padding-top:20px;">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Start here</span>
+      <h2>Guides and recipes for real life in Cairo</h2>
+      <p>Pick one and try it today. Each page is practical, honest and made to be used.</p>
+    </div>
+
+    <div class="cards">
+      <a class="card feature c1" href="https://wellnesswithangyeg-source.github.io/cairo-beauty-foods/" target="_blank" rel="noopener">
+        <span class="card-num">01</span>
+        <div>
+          <span class="tag">Guide</span>
+          <h3>The Cairo Beauty Kitchen</h3>
+          <p>Thirteen beauty foods the world talks about, already sitting in your Cairo kitchen. Find out where to buy each one well and the one thing to watch.</p>
+        </div>
+        <span class="card-cta">Read the guide <span class="arrow">→</span></span>
+      </a>
+
+      <a class="card c2" href="https://wellnesswithangyeg-source.github.io/cool/" target="_blank" rel="noopener">
+        <span class="card-num">02</span>
+        <div>
+          <span class="tag">Guide</span>
+          <h3>Eating Through the Heat Wave</h3>
+          <p>What actually helps your body cope when Cairo passes 40°C, and what quietly makes it worse.</p>
+        </div>
+        <span class="card-cta">Read the guide <span class="arrow">→</span></span>
+      </a>
+
+      <a class="card c3" href="https://wellnesswithangyeg-source.github.io/protein-cookie/" target="_blank" rel="noopener">
+        <span class="card-num">03</span>
+        <div>
+          <span class="tag">Recipe</span>
+          <h3>Chocolate Chip Chickpea Cookies</h3>
+          <p>Soft, fudgy and quietly high in protein. No refined sugar, just maple.</p>
+        </div>
+        <span class="card-cta">Get the recipe <span class="arrow">→</span></span>
+      </a>
+
+      <a class="card feature c4" href="https://wellnesswithangyeg-source.github.io/sardines-recipe/" target="_blank" rel="noopener">
+        <span class="card-num">04</span>
+        <div>
+          <span class="tag">Recipe</span>
+          <h3>Baked Sardines, Mediterranean Style</h3>
+          <p>Olive oil, lemon and garlic. A light, golden dinner on the table in under 15 minutes.</p>
+        </div>
+        <span class="card-cta">Get the recipe <span class="arrow">→</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section about">
+  <div class="wrap about-grid">
+    <div>
+      <span class="eyebrow">About me</span>
+      <h2>Wellness that is honest and practical</h2>
+    </div>
+    <div>
+      <p>I'm a yoga teacher and certified nutritionist. Yoga and nutrition are the two threads I pull on most: on the mat, in the kitchen, and in the conversations I have with the community I've built online.</p>
+      <p>I care about wellness you can actually use. No trends for the sake of trends, just tips, hacks and ideas that fit into a real day.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="retreat">
+  <div class="wrap">
+    <div class="retreat">
+      <span class="eyebrow">Next retreat</span>
+      <h2>Matarma, <em>Ras Sidr</em></h2>
+      <p>Slower days built around movement, food and a bit of stillness. Show your interest and join me.</p>
+      <a class="btn btn-light" id="retreatBtn" href="https://docs.google.com/forms/d/e/1FAIpQLSd8C0yPoa1EOfXN9Vu3q37bhlfh3h3IcuGzlzDS74Qqlh_pQw/viewform?usp=preview" target="_blank" rel="noopener">Show your interest <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="follow">
+  <div class="wrap">
+    <h2>Follow along</h2>
+    <p>New tips, recipes and retreat news land here first.</p>
+    <div class="hero-btns">
+      <a class="btn btn-primary" href="https://www.instagram.com/wellnesswithangy" target="_blank" rel="noopener">@wellnesswithangy</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/cocozen.shop/" target="_blank" rel="noopener">@cocozen.shop</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Wellness with Angy · Cairo, Egypt · General wellness information, not a substitute for medical advice.</p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSd8C0yPoa1EOfXN9Vu3q37bhlfh3h3IcuGzlzDS74Qqlh_pQw/viewform?usp=preview" target="_blank" rel="noopener">Join the next retreat <span class="arrow">→</span></a>
+</div>
+
+<script>
+  (function(){
+    var bar = document.getElementById('sticky');
+    var heroBtns = document.getElementById('heroBtns');
+    var retreat = document.getElementById('retreat');
+    if(!bar || !heroBtns || !retreat || !('IntersectionObserver' in window)) return;
+    var heroSeen = true, retreatSeen = false;
+    function update(){ bar.classList.toggle('show', !heroSeen && !retreatSeen); }
+    new IntersectionObserver(function(e){ heroSeen = e[0].isIntersecting; update(); }).observe(heroBtns);
+    new IntersectionObserver(function(e){ retreatSeen = e[0].isIntersecting; update(); }, {threshold:0.25}).observe(retreat);
+  })();
+</script>
+</body>
+</html>
