@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Angy | Yoga Teacher and Certified Nutritionist in Cairo</title>
-<meta name="description" content="Simple wellness tips, guides and recipes from Angy, yoga teacher and certified nutritionist. Join my next retreat in Matarma, Ras Sidr.">
+<meta name="description" content="Simple wellness tips, guides and recipes from Angy, yoga teacher and certified nutritionist. Show your interest in my next retreat in Matarma, Ras Sidr.">
 <meta property="og:title" content="Angy | Yoga Teacher and Certified Nutritionist">
-<meta property="og:description" content="Simple wellness tips, guides and recipes. Join my next retreat in Matarma, Ras Sidr.">
+<meta property="og:description" content="Simple wellness tips, guides and recipes. Show your interest in my next retreat in Matarma, Ras Sidr.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#FBF6EF">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23B5583A'/%3E%3Ctext x='32' y='43' font-size='34' text-anchor='middle' fill='%23FBF6EF' font-family='Georgia,serif' font-style='italic'%3EA%3C/text%3E%3C/svg%3E">
@@ -25,6 +25,7 @@
     --sage:#DDE3D0;
     --sand:#F0E4D1;
     --clay:#EBD3C4;
+    --mist:#DDE6E4;
     --night:#2A231E;
   }
   *{ box-sizing:border-box; }
@@ -121,7 +122,7 @@
   }
   .card:hover{ transform:translateY(-6px); box-shadow:0 24px 44px rgba(36,30,25,.14); }
   .card.feature{ grid-column:1 / -1; min-height:300px; }
-  .c1{ background:var(--clay); } .c2{ background:var(--sage); } .c3{ background:var(--sand); } .c4{ background:var(--blush); }
+  .c1{ background:var(--clay); } .c2{ background:var(--sage); } .c3{ background:var(--sand); } .c4{ background:var(--blush); } .c5{ background:var(--mist); }
   .card-num{
     position:absolute; right:26px; top:6px; font-family:'Cormorant Garamond', serif; font-style:italic;
     font-size:7.5rem; line-height:1; color:rgba(36,30,25,.07); pointer-events:none;
@@ -205,7 +206,7 @@
 <nav>
   <div class="wrap">
     <a class="wordmark" href="#top">Angy</a>
-    <a class="btn btn-primary nav-cta" href="#retreat">Join the retreat</a>
+    <a class="btn btn-primary nav-cta" href="#retreat">Show your interest</a>
   </div>
 </nav>
 
@@ -216,7 +217,7 @@
       <h1 class="rise d1">Hello, I'm <em>Angy.</em></h1>
       <p class="sub rise d1">I share simple wellness tips, hacks and ideas with my community online, and in person through my retreats.</p>
       <div class="hero-btns rise d2" id="heroBtns">
-        <a class="btn btn-primary" href="#retreat">Join my next retreat <span class="arrow">→</span></a>
+        <a class="btn btn-primary" href="#retreat">Show interest in my next retreat <span class="arrow">→</span></a>
         <a class="btn btn-ghost" href="#start">Explore guides and recipes</a>
       </div>
       <div class="proof rise d2">
@@ -250,18 +251,28 @@
     </div>
 
     <div class="cards">
-      <a class="card feature c1" href="https://wellnesswithangyeg-source.github.io/cairo-beauty-foods/" target="_blank" rel="noopener">
+      <a class="card feature c1" href="https://wellnesswithangyeg-source.github.io/bolognese/" target="_blank" rel="noopener">
         <span class="card-num">01</span>
+        <div>
+          <span class="tag">New recipe</span>
+          <h3>Easy Beef Bolognese</h3>
+          <p>A rich, simple sauce that simmers in 10 to 15 minutes. Serve it with penne, or skip the pasta and spoon it over crisp lettuce.</p>
+        </div>
+        <span class="card-cta">Get the recipe <span class="arrow">→</span></span>
+      </a>
+
+      <a class="card c4" href="https://wellnesswithangyeg-source.github.io/cairo-beauty-foods/" target="_blank" rel="noopener">
+        <span class="card-num">02</span>
         <div>
           <span class="tag">Guide</span>
           <h3>The Cairo Beauty Kitchen</h3>
-          <p>Thirteen beauty foods the world talks about, already sitting in your Cairo kitchen. Find out where to buy each one well and the one thing to watch.</p>
+          <p>Thirteen beauty foods already sitting in your Cairo kitchen, where to buy each one well and the one thing to watch.</p>
         </div>
         <span class="card-cta">Read the guide <span class="arrow">→</span></span>
       </a>
 
       <a class="card c2" href="https://wellnesswithangyeg-source.github.io/cool/" target="_blank" rel="noopener">
-        <span class="card-num">02</span>
+        <span class="card-num">03</span>
         <div>
           <span class="tag">Guide</span>
           <h3>Eating Through the Heat Wave</h3>
@@ -271,7 +282,7 @@
       </a>
 
       <a class="card c3" href="https://wellnesswithangyeg-source.github.io/protein-cookie/" target="_blank" rel="noopener">
-        <span class="card-num">03</span>
+        <span class="card-num">04</span>
         <div>
           <span class="tag">Recipe</span>
           <h3>Chocolate Chip Chickpea Cookies</h3>
@@ -280,8 +291,8 @@
         <span class="card-cta">Get the recipe <span class="arrow">→</span></span>
       </a>
 
-      <a class="card feature c4" href="https://wellnesswithangyeg-source.github.io/sardines-recipe/" target="_blank" rel="noopener">
-        <span class="card-num">04</span>
+      <a class="card c5" href="https://wellnesswithangyeg-source.github.io/sardines-recipe/" target="_blank" rel="noopener">
+        <span class="card-num">05</span>
         <div>
           <span class="tag">Recipe</span>
           <h3>Baked Sardines, Mediterranean Style</h3>
@@ -335,7 +346,7 @@
 </footer>
 
 <div class="sticky" id="sticky">
-  <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSd8C0yPoa1EOfXN9Vu3q37bhlfh3h3IcuGzlzDS74Qqlh_pQw/viewform?usp=preview" target="_blank" rel="noopener">Join the next retreat <span class="arrow">→</span></a>
+  <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSd8C0yPoa1EOfXN9Vu3q37bhlfh3h3IcuGzlzDS74Qqlh_pQw/viewform?usp=preview" target="_blank" rel="noopener">Show your interest in the retreat <span class="arrow">→</span></a>
 </div>
 
 <script>
